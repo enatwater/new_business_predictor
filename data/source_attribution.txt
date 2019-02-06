@@ -1,1 +1,10 @@
 Data Source Attribution
+
+Source: Illinois Department of Financial and Professional Regulation
+URL: https://data.illinois.gov/dataset/professional-licensing/resource/e7a64d94-ec14-4f94-82da-fbe348ba8df5
+Accessed on: 2019-02-05
+Last updated at: 2019-02-15
+License type: Creative Commons Attribution
+Pre-processing: The raw file was exceeded Github’s size limits, so I filtered the full dataset with the following:
+`df.loc[(df['City'] == 'CHICAGO') & (df['Business'] == ‘Y’)]`
+Most licenses are for individuals. Filtering for businesses only took the total number of records for Chicago license holders from ~775K to ~32K.
