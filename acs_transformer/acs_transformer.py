@@ -240,10 +240,10 @@ def acs_transformer(year, state_abbr, table, geo_unit, content_type):
     #                Clean columns               #
     ##############################################
     
-    df.columns = df.columns.str.strip()\
+    df.columns = df.columns.str.replace('%' , '')\
+          .str.strip()\
           .str.replace(' ','_')\
           .str.replace(':','')\
-          .str.replace('%' , '')\
           .str.replace('(' , '_')\
           .str.replace (')' , '_')\
           .str.lower()
